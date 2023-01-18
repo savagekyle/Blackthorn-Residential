@@ -1,28 +1,52 @@
+.navbar {
+    top: 0;
+    z-index: 999;
+    position: sticky;
+}
+
 .container {
     display: flex;
     height: 80px;
     justify-content: space-between;
     background-color: rgb(46, 48, 48);
     align-items: center;
-    margin: -10px;
-    color: white;
 }
 
 .navbar-logo {
-    text-decoration: none;
     font-size: 3rem;
     font-weight: bold;
     color: white;
     margin-left: 8rem;
+    text-decoration: none;
 }
+
+.menu-icon {
+    color: white;
+    font-size: large;
+}
+
 .list-items {
     display: flex;
     padding: 10px;
     margin-right: 8rem;
+
 }
 .nav-links {
     list-style: none;
     margin-right: 20px;
-    font-weight: bold;
     font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bars {
+    cursor: default;
+    color: white;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+.nav-links:hover {
+    color: darkgray;
 }
