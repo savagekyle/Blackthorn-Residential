@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    background-color: rgb(46, 48, 48);
+    align-items: center;
+    margin: -10px;
+    color: white;
+}
+
+.navbar-logo {
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 8rem;
+}
+.list-items {
+    display: flex;
+    padding: 10px;
+    margin-right: 8rem;
+}
+.nav-links {
+    list-style: none;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
