@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.main-image {
+    background-image: url('./assets/placeholder-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+}    

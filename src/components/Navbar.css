@@ -2,6 +2,7 @@
     top: 0;
     z-index: 999;
     position: sticky;
+    opacity: 90%;
 }
 
 .container {
@@ -84,7 +85,7 @@
     font-size: 3rem;
     opacity: 95%;
     list-style: none;
-    
+    z-index: 999;
 }
 
 .mobile-menu-icon {

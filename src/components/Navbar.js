@@ -24,15 +24,15 @@ function Navbar() {
             icon={click ? faBars : faX}
           />
           <ul className={"list-items"}>
-            <Link to="/" onClick={closeMobileMenu} className="nav-links">
+            <Link to="/gallery" className="nav-links">
               <li>Gallery</li>
             </Link>
             <li className="nav-bars">|</li>
-            <Link to="/" onClick={closeMobileMenu} className="nav-links">
+            <Link to="/about" className="nav-links">
               <li>About</li>
             </Link>
             <li className="nav-bars">|</li>
-            <Link to="/" onClick={closeMobileMenu} className="nav-links">
+            <Link to="/contact" className="nav-links">
               <li>Contact</li>
             </Link>
           </ul>
