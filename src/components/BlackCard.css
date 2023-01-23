@@ -1,0 +1,24 @@
+.card-container {
+    position: relative;
+    background-color: rgb(46, 48, 48);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    width: 500px;
+    top: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 600px;
+    box-shadow: 10px 5px 5px #242424;
+}
+
+.card-text {
+    padding: 40px;
+    font-size: 3rem;
+    text-align: center;
+}
