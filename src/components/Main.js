@@ -26,20 +26,12 @@ function Main() {
       </div>
       <div className="btn-container">
         {button && (
-          <Button
-            className="btn-spacing"
-            buttonSize="btn--large"
-            buttonStyle="btn--outline"
-          >
+          <Button buttonSize="btn--large" buttonStyle="btn--outline">
             View Work
           </Button>
         )}
         {button && (
-          <Button
-            className="btn-spacing"
-            buttonSize="btn--large"
-            buttonStyle="btn--primary"
-          >
+          <Button buttonSize="btn--large" buttonStyle="btn--primary">
             Contact
           </Button>
         )}
