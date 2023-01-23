@@ -1,6 +1,15 @@
-.plop {
+.background {
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 90vh;
+    opacity: 45%;
+}
+
+.br {
     display: flex;
-    flex-direction: column;
     color: white;
     position: absolute;
     justify-content: center;
@@ -9,23 +18,37 @@
     left: 0;
     width: 100%;
     height: 70vh;
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight:bolder;
     opacity: 100%;
+    z-index: 100;
+}
+
+@media (max-width: 900px) {
+    .br {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .br {
+        font-size: 3rem;
+    }
 }
 
 .br-title {
-    margin: 1rem;
+    margin: 1rem
 }
 
 .main-image {
     background-image: url('../assets/placeholder-background.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 90vh;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     opacity: 80%;
+    z-index: -100;
 }    
