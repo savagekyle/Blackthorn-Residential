@@ -40,27 +40,25 @@ function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      <div>
-        <ul className={click ? "hidden" : "mobile-menu"}>
-          <Link to="/" onClick={closeMobileMenu} className="mobile-items">
-            <li>Home</li>
-          </Link>
-          <Link to="/" onClick={closeMobileMenu} className="mobile-items">
-            <li>Gallery</li>
-          </Link>
-          <Link to="/" onClick={closeMobileMenu} className="mobile-items">
-            <li>About</li>
-          </Link>
-          <Link to="/" onClick={closeMobileMenu} className="mobile-items">
-            <li>Contact</li>
-          </Link>
-        </ul>
-        <FontAwesomeIcon
-          className={click ? "hidden" : "mobile-menu-icon"}
-          onClick={handleClick}
-          icon={click ? faBars : faX}
-        />
-      </div>
+      <ul className={click ? "hidden slide-out" : "mobile-menu slide-out"}>
+        <Link to="/" onClick={closeMobileMenu} className="mobile-items">
+          <li>Home</li>
+        </Link>
+        <Link to="/" onClick={closeMobileMenu} className="mobile-items">
+          <li>Gallery</li>
+        </Link>
+        <Link to="/" onClick={closeMobileMenu} className="mobile-items">
+          <li>About</li>
+        </Link>
+        <Link to="/" onClick={closeMobileMenu} className="mobile-items">
+          <li>Contact</li>
+        </Link>
+      </ul>
+      <FontAwesomeIcon
+        className={"mobile-menu-icon"}
+        onClick={handleClick}
+        icon={click ? faBars : faX}
+      />
     </>
   );
 }

@@ -24,7 +24,15 @@
 }
 
 .card-text {
-    padding: 40px;
+    padding-bottom: 40px;
     font-size: 3rem;
     text-align: center;
 }
+
+@media (max-width: 800px) {
+    .card-text {
+        font-size: 2rem;
+        max-width: 550px;
+    }
+}
+

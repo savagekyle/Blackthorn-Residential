@@ -2,6 +2,7 @@ import React from "react";
 import "./Testimonials.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
+import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -9,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Testimonials() {
+  SwiperCore.use([Autoplay]);
   return (
     <Swiper
       modules={[Navigation, Pagination]}
@@ -16,7 +18,7 @@ function Testimonials() {
       navigation
       pagination={{ clickable: true }}
       loop={true}
-      autoplay
+      autoplay={{ delay: 5000, disableOnInteraction: false }}
       slidesPerView={1}
     >
       <SwiperSlide>
