@@ -1,6 +1,7 @@
 import React from "react";
 import "./BlackCard.css";
 import { Button } from "./Button";
+import { Link } from "react-router-dom";
 
 function BlackCard() {
   return (
@@ -9,9 +10,11 @@ function BlackCard() {
         "Lorem Ipsum is simply dummy text of the printing and typesetting
         industry."
       </p>
-      <Button buttonSize="btn--large" buttonStyle="btn--outline">
-        Read more
-      </Button>
+      <Link to="/about">
+        <Button buttonSize="btn--large" buttonStyle="btn--outline">
+          Read more
+        </Button>
+      </Link>
     </div>
   );
 }
