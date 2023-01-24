@@ -111,6 +111,17 @@
     color: white;
     font-size: large;
     cursor: pointer;
+    z-index: 20000;
+    position:absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+    .mobile-menu-icon {
+        font-size: 1rem;
+    }
 }
 
 .mobile-items {

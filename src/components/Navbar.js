@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const [click, setClick] = useState(true);
@@ -21,7 +21,7 @@ function Navbar() {
           <FontAwesomeIcon
             className="menu-icon"
             onClick={handleClick}
-            icon={click ? faBars : faX}
+            icon={faBars}
           />
           <ul className={"list-items"}>
             <Link to="/gallery" className="nav-links">
@@ -44,21 +44,21 @@ function Navbar() {
         <Link to="/" onClick={closeMobileMenu} className="mobile-items">
           <li>Home</li>
         </Link>
-        <Link to="/" onClick={closeMobileMenu} className="mobile-items">
+        <Link to="/gallery" onClick={closeMobileMenu} className="mobile-items">
           <li>Gallery</li>
         </Link>
-        <Link to="/" onClick={closeMobileMenu} className="mobile-items">
+        <Link to="/about" onClick={closeMobileMenu} className="mobile-items">
           <li>About</li>
         </Link>
-        <Link to="/" onClick={closeMobileMenu} className="mobile-items">
+        <Link to="/contact" onClick={closeMobileMenu} className="mobile-items">
           <li>Contact</li>
         </Link>
+        <FontAwesomeIcon
+          className={"mobile-menu-icon"}
+          onClick={handleClick}
+          icon={faBars}
+        />
       </ul>
-      <FontAwesomeIcon
-        className={"mobile-menu-icon"}
-        onClick={handleClick}
-        icon={click ? faBars : faX}
-      />
     </>
   );
 }
