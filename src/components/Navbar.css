@@ -99,6 +99,7 @@
     opacity: 98%;
     list-style: none;
     z-index: 999;
+    animation: 1s ease-out 0s 1 slideInLeft;
 }
 
 @media (max-width: 600px) {
@@ -127,12 +128,28 @@
 .mobile-items {
     text-decoration: none;
     color: white;
-    margin-top: 3rem;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    transition: background-color .5s ease-out 100ms;
+}
+
+.mobile-items:hover {
+    background-color: #fff;
+    color: #242424;
+    transform: scale();
 }
 
 
-
-.slide-out {
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(0);
-}
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
