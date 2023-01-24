@@ -50,6 +50,18 @@
     }
 }
 
+@media (max-width: 500px) {
+    .br {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .br {
+        font-size: 2rem;
+    }
+}
+
 .br-title {
     margin: 1rem
 }

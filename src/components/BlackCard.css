@@ -17,6 +17,12 @@
     box-shadow: 10px 5px 5px #242424;
 }
 
+@media (max-width: 800px) {
+    .card-container {
+        width: 100%;
+    }
+}
+
 .card-text {
     padding: 40px;
     font-size: 3rem;
