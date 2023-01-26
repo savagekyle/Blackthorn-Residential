@@ -5,6 +5,7 @@ import Main from "./components/Main";
 import BlackCard from "./components/BlackCard";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             </>
           }
         />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>

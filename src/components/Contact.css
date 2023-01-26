@@ -1,0 +1,130 @@
+.contact-image {
+    background-image: url('../assets/rustic-interior.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}   
+
+.form-container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(46, 48, 48, .95);
+    width: 60%;
+    height: 80%;
+    margin-top: 40px;
+    animation: fadeIn .5s;
+}
+
+.general-info {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 80px;
+}
+
+.general-info h1 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.general-info p, .contact-form span {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.first-name:after, .email:after {
+    content: " *";
+    color: red;
+} 
+
+.first-name, .email, .subject, .message {
+    font-size: 1.5rem;
+    padding-top: 30px;
+}
+
+.contact-form .first-name {
+    padding-top: 0;
+}
+
+.first-name-input, .email-input, .subject-input {
+    width: 90%;
+    height: 50px;
+}
+
+.first-name-input, .email-input, .subject-input, .message-input {
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.message-input {
+    width: 90%;
+    height: 200px;
+}
+
+.submit-button {
+    width: 90%;
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+    .form-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1200px) {
+    .form-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .general-info, .general-info p, .general-info h1{
+        flex-direction: row;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .general-info {
+        width: 100%;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .contact-form {
+        width: 100%;
+        padding: 40px;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .contact-form {
+        padding: 0;
+    }
+}

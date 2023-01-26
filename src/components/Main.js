@@ -18,7 +18,7 @@ function Main() {
 
   return (
     <>
-      <div className="background"></div>
+      <div id="home" className="background"></div>
       <div className="main-image"></div>
       <div className="br">
         <div className="br-title">Blackthorn</div>

@@ -3,11 +3,19 @@
     width: 100%;
     margin-top: 100px;
     background-color: rgb(247, 239, 228);
+    margin-bottom: 40px;
 }
 
 @media (max-width: 900px) {
     .swiper {
         width: 100%
+    }
+}
+
+@media (max-width: 800px) {
+    .swiper {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 

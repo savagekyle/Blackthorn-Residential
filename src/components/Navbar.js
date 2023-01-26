@@ -40,7 +40,7 @@ function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      <ul className={click ? "hidden slide-out" : "mobile-menu slide-out"}>
+      <ul className={click ? "hidden" : "mobile-menu"}>
         <Link to="/" onClick={closeMobileMenu} className="mobile-items">
           <li>Home</li>
         </Link>
