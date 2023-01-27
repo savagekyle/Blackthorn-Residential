@@ -21,6 +21,7 @@
     height: 80%;
     margin-top: 40px;
     animation: fadeIn .5s;
+    line-height: 1.6;
 }
 
 .general-info {
