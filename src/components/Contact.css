@@ -28,6 +28,7 @@
     flex-direction: column;
     width: 30%;
     padding: 80px;
+    word-wrap: break-word;
 }
 
 .general-info h1 {

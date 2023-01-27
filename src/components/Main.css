@@ -64,7 +64,8 @@
 }
 
 .br-title {
-    margin: 1rem
+    margin: 1rem;
+    font-family: 'Aboreto', cursive;
 }
 
 .btn-container{

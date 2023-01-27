@@ -9,7 +9,7 @@
     display: flex;
     height: 80px;
     justify-content: space-between;
-    background-color: rgb(46, 48, 48);
+    background-color: rgb(46, 48, 48, .95);
     align-items: center;
 }
 
@@ -19,6 +19,7 @@
     color: white;
     margin-left: 4rem;
     text-decoration: none;
+    font-family: 'Aboreto', cursive;
 }
 
 @media (max-width: 700px) {
@@ -50,7 +51,7 @@
     display: flex;
     padding: 10px;
     margin-right: 8rem;
-
+    font-family: 'Aboreto', cursive;
 }
 
 @media (max-width: 900px) {
@@ -69,6 +70,10 @@
     font-size: 1.2rem;
     text-decoration: none;
     color: white;
+}
+
+.nav-links li {
+    font-family: 'Aboreto', cursive;
 }
 
 .nav-links:hover {
@@ -124,7 +129,7 @@
     }
 }
 
-.mobile-items {
+.mobile-items{
     text-decoration: none;
     color: white;
     width: 100%;
@@ -135,6 +140,10 @@
     justify-content: center;
     padding: 15px 0;
     transition: background-color .5s ease-out 100ms;
+}
+
+.mobile-items li{
+    font-family: 'Aboreto', cursive;
 }
 
 .mobile-items:hover {
