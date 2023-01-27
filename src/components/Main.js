@@ -4,7 +4,7 @@ import "./Main.css";
 function Main() {
   return (
     <>
-      <div id="home" className="background"></div>
+      <div id="home"></div>
       <div className="main-image"></div>
       <div className="br">
         <div className="br-title">Blackthorn</div>
