@@ -27,6 +27,7 @@
     padding-bottom: 40px;
     font-size: 3rem;
     text-align: center;
+    font-family: 'Aboreto', cursive;
 }
 
 @media (max-width: 800px) {

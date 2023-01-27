@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Logo from "../assets/br-logo-transparent-white.png";
 
 function Navbar() {
   const [click, setClick] = useState(true);
@@ -14,8 +15,8 @@ function Navbar() {
     <>
       <nav className={click ? "navbar" : "hidden"}>
         <div className="container">
-          <Link to="/" className="navbar-logo">
-            BR
+          <Link to="/">
+            <img className="navbar-logo" src={Logo} alt="logo" />
           </Link>
           {/* Hamburger Icon */}
           <FontAwesomeIcon
