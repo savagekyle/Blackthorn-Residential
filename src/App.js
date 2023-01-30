@@ -7,6 +7,7 @@ import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
       <Footer />
     </>
