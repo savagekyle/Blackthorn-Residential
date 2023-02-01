@@ -63,7 +63,9 @@ function Gallery() {
         </div>
       )}
       <div className="gallery-container">
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <ResponsiveMasonry
+          columnsCountBreakPoints={{ 350: 1, 550: 2, 1175: 3 }}
+        >
           <Masonry gutter="20px">
             {images.map((image, i) => (
               <img
