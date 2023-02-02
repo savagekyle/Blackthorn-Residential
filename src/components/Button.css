@@ -35,7 +35,13 @@
     font-weight: bold;
 }
 
-.btn--medium:hover, .btn--large:hover {
+.btn--largest {
+    padding: 30px 70px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.btn--medium:hover, .btn--large:hover, .btn--largest:hover {
     background: #fff;
     color: #242424;
     transition: all 0.3s ease-out;
