@@ -27,11 +27,23 @@ function Gallery() {
   const imgAction = (action) => {
     let i = data.i;
     if (action === "next-img") {
-      setData({ img: images[i + 1], i: i + 1 });
+      if (i < images.length - 1) {
+        setData({ img: images[i + 1], i: i + 1 });
+        console.log(i);
+      } else {
+        setData({ img: images[0], i: 0 });
+        console.log(i);
+      }
     }
 
     if (action === "prev-img") {
-      setData({ img: images[i - 1], i: i - 1 });
+      if (i >= 1) {
+        setData({ img: images[i - 1], i: i - 1 });
+        console.log(i);
+      } else {
+        setData({ img: images[images.length - 1], i: images.length - 1 });
+        console.log(i);
+      }
     }
 
     if (!action) {
@@ -43,23 +55,25 @@ function Gallery() {
     <>
       <div className="spacer"></div>
       {data.img && (
-        <div className="zoom-img">
-          <FontAwesomeIcon
-            onClick={() => imgAction()}
-            className="close-icon"
-            icon={faX}
-          />
-          <FontAwesomeIcon
-            onClick={() => imgAction("prev-img")}
-            className="prev"
-            icon={faAngleLeft}
-          />
-          <img className="big-img" src={data.img} alt="enlarged" />{" "}
-          <FontAwesomeIcon
-            onClick={() => imgAction("next-img")}
-            className="next"
-            icon={faAngleRight}
-          />
+        <div className="zoom-img-container">
+          <div className="zoom-img">
+            <FontAwesomeIcon
+              onClick={() => imgAction()}
+              className="close-icon"
+              icon={faX}
+            />
+            <FontAwesomeIcon
+              onClick={() => imgAction("prev-img")}
+              className="prev"
+              icon={faAngleLeft}
+            />
+            <img className="big-img" src={data.img} alt="enlarged" />{" "}
+            <FontAwesomeIcon
+              onClick={() => imgAction("next-img")}
+              className="next"
+              icon={faAngleRight}
+            />
+          </div>
         </div>
       )}
       <div className="gallery-container">
