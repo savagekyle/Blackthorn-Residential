@@ -19,7 +19,7 @@ function App() {
           path="/"
           element={
             <>
-              <Main /> <BlackCard /> <Testimonials /> <GalleryCTA />
+              <Main /> <BlackCard /> <GalleryCTA /> <Testimonials />
             </>
           }
         />

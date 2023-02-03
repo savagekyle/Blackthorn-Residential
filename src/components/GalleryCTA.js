@@ -16,7 +16,11 @@ function GalleryCTA() {
           <img src={Img} alt="" className="cta-img" />
           <div className="img-btn-wrapper">
             <Link to="/gallery">
-              <Button buttonSize="btn--largest" buttonStyle="btn--outline">
+              <Button
+                className="btn-mobile-sizing"
+                buttonSize="btn--largest"
+                buttonStyle="btn--outline"
+              >
                 Gallery
               </Button>
             </Link>

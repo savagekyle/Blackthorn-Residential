@@ -1,88 +1,84 @@
 .swiper {
-    height: 500px;
-    width: 100%;
-    margin-top: 100px;
-    background-color: rgb(247, 239, 228);
-    margin-bottom: 40px;
+  height: 500px;
+  width: 100%;
+  background-color: rgb(247, 239, 228);
+  margin: 40px 0;
 }
 
 @media (max-width: 900px) {
-    .swiper {
-        width: 100%
-    }
-}
-
-@media (max-width: 800px) {
-    .swiper {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+  .swiper {
+    width: 100%;
+  }
 }
 
 .swiper .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-    cursor: grab;
-    background-color: rgb(247, 239, 228);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  cursor: grab;
+  background-color: rgb(247, 239, 228);
 }
 
 .slide-container {
-    text-align: center;
+  text-align: center;
 }
 
-.swiper-button-next, .swiper-button-prev {
-    color:rgb(46, 48, 48) !important;
-    padding: 0 40px;
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgb(46, 48, 48) !important;
+  padding: 0 40px;
 }
 
-@media (max-width:800px) {
-    .swiper-button-next, .swiper-button-prev {
-        padding: 0;
-    }
+@media (max-width: 800px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    padding: 0;
+  }
 }
 
-.swiper-slide h1, .swiper-slide p, .quote-icon {
-    margin: 10px;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
+.swiper-slide h1,
+.swiper-slide p,
+.quote-icon {
+  margin: 10px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 .swiper-slide h1 {
-    font-size: 3rem;
-    max-width: 700px;
-    color: #242424
+  font-size: 3rem;
+  max-width: 700px;
+  color: #242424;
 }
 
-@media (max-width:900px) {
-    .swiper-slide h1 {
-        font-size: 2rem;
-        max-width: 400px;
-    }
+@media (max-width: 900px) {
+  .swiper-slide h1 {
+    font-size: 2rem;
+    max-width: 400px;
+  }
 }
 
-@media (max-width:500px) {
-    .swiper-slide h1 {
-        font-size: 1.5rem;
-    }
+@media (max-width: 500px) {
+  .swiper-slide h1 {
+    font-size: 1.5rem;
+  }
 }
 
-@media (max-width:400px) {
-    .swiper-slide h1 {
-        max-width: 200px;
-    }
+@media (max-width: 400px) {
+  .swiper-slide h1 {
+    max-width: 200px;
+  }
 }
 
 .swiper-slide p {
-    font-size: 1rem;
-    color: rgb(121, 121, 121);
+  font-size: 1rem;
+  color: rgb(121, 121, 121);
 }
 
 .quote-icon {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .swiper-pagination-bullet-active {
-    background-color:rgb(46, 48, 48) !important;
+  background-color: rgb(46, 48, 48) !important;
 }
