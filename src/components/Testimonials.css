@@ -1,7 +1,7 @@
 .swiper {
   height: 500px;
   width: 100%;
-  background-color: rgb(247, 239, 228);
+  background-color: var(--clr-accent);
   margin: 40px 0;
 }
 
@@ -17,7 +17,7 @@
   align-items: center;
   font-size: 60px;
   cursor: grab;
-  background-color: rgb(247, 239, 228);
+  background-color: var(--clr-accent);
 }
 
 .slide-container {
@@ -26,7 +26,7 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: rgb(46, 48, 48) !important;
+  color: var(--clr-primary) !important;
   padding: 0 40px;
 }
 
@@ -72,7 +72,7 @@
 
 .swiper-slide p {
   font-size: 1rem;
-  color: rgb(121, 121, 121);
+  color: var(--clr-gray);
 }
 
 .quote-icon {
@@ -80,5 +80,5 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: rgb(46, 48, 48) !important;
+  background-color: var(--clr-primary) !important;
 }

@@ -1,76 +1,83 @@
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    font-size: 4rem;
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(247,239,228,1) 50%, rgba(247,239,225,1) 100%);
-    font-family: 'Aboreto', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 4rem;
+  background: var(--clr-white);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 239, 228, 1) 50%,
+    rgba(247, 239, 225, 1) 100%
+  );
+  font-family: "Aboreto", cursive;
 }
 
 .about-us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-container {
-    width: 80%;
-    display: flex;
-    gap: 80px;
-    margin-top: 100px;
+  width: 80%;
+  display: flex;
+  gap: 80px;
+  margin-top: 100px;
 }
 
-.about-left, .about-right {
-    width: 50%;
-    height: 600px;
+.about-left,
+.about-right {
+  width: 50%;
+  height: 600px;
 }
 
 .about-left {
-    margin-left: 100px;
+  margin-left: 100px;
 }
 
 .about-right {
-    margin-right: 100px
+  margin-right: 100px;
 }
 
 .about-header {
-    font-size: 2rem;
-    padding-left: 20px;
+  font-size: 2rem;
+  padding-left: 20px;
 }
 
-.about-left p, .about-right p {
-    font-size: 1rem;
-    padding: 20px;
-    max-width: 700px;
-    line-height: 1.6;
+.about-left p,
+.about-right p {
+  font-size: 1rem;
+  padding: 20px;
+  max-width: 700px;
+  line-height: 1.6;
 }
 
 @media (max-width: 1200px) {
-    .about-container {
-        flex-direction: column;
-        margin: 100px 0;
-    }
+  .about-container {
+    flex-direction: column;
+    margin: 100px 0;
+  }
 }
 
 @media (max-width: 800px) {
-    .about-container {
-        height: auto;
-    }
+  .about-container {
+    height: auto;
+  }
 }
 
 @media (max-width: 1200px) {
-    .about-left, .about-right {
-        width: 100%;
-        margin-left: 0;
-        height: auto;
-    }
+  .about-left,
+  .about-right {
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+  }
 }
 
 @media (max-width: 1200px) {
-    .about-right {
-        margin-top: 50px;
-    }
+  .about-right {
+    margin-top: 50px;
+  }
 }
-    

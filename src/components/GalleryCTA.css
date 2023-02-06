@@ -21,7 +21,7 @@ body {
 }
 
 .cta-container {
-  background-color: rgb(0, 0, 0, 0.8);
+  background-color: var(--clr-primary);
   display: flex;
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 .cta-title {
-  color: white;
+  color: var(--clr-white);
   writing-mode: vertical-lr;
   font-size: 3.5rem;
   text-orientation: upright;

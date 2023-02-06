@@ -1,39 +1,51 @@
 .card-container {
-    position: relative;
-    background-color: rgb(46, 48, 48);
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -50px;
-    width: 500px;
-    top: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    height: 600px;
-    box-shadow: 10px 5px 5px #242424;
+  position: relative;
+  background-color: var(--clr-primary);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+  width: 500px;
+  top: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-white);
+  height: 600px;
+  box-shadow: 10px 5px 5px var(--clr-primary);
 }
 
 @media (max-width: 800px) {
-    .card-container {
-        width: 100%;
-    }
+  .card-container {
+    width: 100%;
+  }
 }
 
 .card-text {
-    padding-bottom: 40px;
-    font-size: 3rem;
-    text-align: center;
-    font-family: 'Aboreto', cursive;
+  padding-bottom: 40px;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Aboreto", cursive;
 }
 
 @media (max-width: 800px) {
-    .card-text {
-        font-size: 2rem;
-        max-width: 550px;
-    }
+  .card-text {
+    font-size: 2rem;
+    max-width: 550px;
+  }
 }
 
+.card-container Button {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 800px) {
+  .card-container Button {
+    bottom: 4rem;
+  }
+}

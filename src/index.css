@@ -1,4 +1,11 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
+:root {
+  --clr-primary: rgb(46, 48, 48);
+  --clr-primary-95opacity: rgb(46, 48, 48, 0.95);
+  --clr-white: #fff;
+  --clr-gray: rgb(182, 182, 182);
+  --clr-accent: rgb(247, 239, 228);
+}

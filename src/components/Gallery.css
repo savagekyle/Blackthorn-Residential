@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(46, 48, 48, 0.95);
+  background-color: var(--clr-primary-95opacity);
   position: fixed;
 }
 
@@ -41,14 +41,14 @@
   position: absolute;
   top: 10px;
   right: 20px;
-  color: white;
+  color: var(--clr-white);
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 .prev,
 .next {
-  color: #fff;
+  color: var(--clr-white);
   font-size: 3rem;
   padding: 30px;
   cursor: pointer;
