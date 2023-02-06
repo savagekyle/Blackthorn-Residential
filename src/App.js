@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
 import GalleryCTA from "./components/GalleryCTA";
+import ThankYou from "./components/ThankYou";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           }
         />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/contact/thank-you" element={<ThankYou />} />
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
       </Routes>

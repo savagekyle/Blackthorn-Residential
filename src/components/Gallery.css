@@ -37,13 +37,17 @@
   max-height: 80%;
 }
 
-.close-icon {
+.x {
+  padding: 10px;
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.close-icon {
   color: var(--clr-white);
   font-size: 1.5rem;
-  cursor: pointer;
 }
 
 .prev,
@@ -78,6 +82,7 @@
   .zoom-img {
     width: 500px;
     height: 500px;
+    margin-top: -200px;
   }
 }
 

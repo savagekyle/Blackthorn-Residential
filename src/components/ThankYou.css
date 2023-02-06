@@ -1,0 +1,40 @@
+.thank-you {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  color: var(--clr-primary);
+}
+
+.thank-you h1 {
+  font-size: 6rem;
+}
+
+@media (max-width: 745px) {
+  .thank-you h1 {
+    font-size: 4rem;
+  }
+
+  .thank-you p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .thank-you h1 {
+    font-size: 3rem;
+  }
+
+  .thank-you p {
+    font-size: 0.6rem;
+    max-width: 230px;
+  }
+}
+
+.thank-you Button {
+  border: 1px var(--clr-primary) solid;
+}

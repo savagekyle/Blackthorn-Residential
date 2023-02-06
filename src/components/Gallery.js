@@ -57,11 +57,9 @@ function Gallery() {
       {data.img && (
         <div className="zoom-img-container">
           <div className="zoom-img">
-            <FontAwesomeIcon
-              onClick={() => imgAction()}
-              className="close-icon"
-              icon={faX}
-            />
+            <div className="x" onClick={() => imgAction()}>
+              <FontAwesomeIcon className="close-icon" icon={faX} />
+            </div>
             <FontAwesomeIcon
               onClick={() => imgAction("prev-img")}
               className="prev"
