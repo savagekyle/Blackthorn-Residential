@@ -32,14 +32,14 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  width: 30%;
+  width: 40%;
   padding: 80px;
 }
 
 .general-info img {
   box-sizing: border-box;
   position: absolute;
-  bottom: 65px;
+  bottom: 80px;
   left: 80px;
   width: 200px;
   height: 110px;
@@ -128,7 +128,7 @@ hr {
 }
 
 @media (max-height: 950px) {
-  .form-container {
+  .contact-form {
     padding-bottom: 40px;
   }
 }
@@ -142,5 +142,6 @@ hr {
 @media (max-width: 1200px) {
   .contact-form {
     align-items: center;
+    padding: none;
   }
 }
