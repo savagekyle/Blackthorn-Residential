@@ -1,15 +1,11 @@
 import React from "react";
 import "./About.css";
-import Img1 from "../assets/rustic-interior.jpg";
-import Img2 from "../assets/profile.jpg";
-import Img3 from "../assets/vision.jpg";
-import Img4 from "../assets/ron-rick.png";
 
 function About() {
   return (
     <>
       <div className="about-page">
-        <section className="about-content">
+        <section className="content-left">
           <h3>About</h3>
           <h1>Blackthorn Residential</h1>
           <hr />
@@ -26,15 +22,8 @@ function About() {
             sunt eius nihil provident modi.
           </p>
         </section>
-        <section className="about-images">
-          <div className="img-section-1">
-            <img src={Img1} alt="" />
-            <img src={Img2} alt="" />
-          </div>
-          <div className="img-section-2">
-            <img src={Img3} alt="" />
-            <img src={Img4} alt="" />
-          </div>
+        <section className="content-right">
+          <h1>Over 30 years of residential construction experience.</h1>
         </section>
       </div>
     </>

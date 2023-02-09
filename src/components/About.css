@@ -1,56 +1,93 @@
 .about-page {
   display: flex;
   height: 100vh;
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 .about-page > * {
   flex-basis: 100%;
 }
 
-.about-content {
+.content-left {
   text-align: center;
   margin-inline: auto;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin-top: 80px;
+  padding: 0 20px;
 }
 
-.about-content h3 {
+.content-left h3 {
   font-size: 1.5rem;
   padding-bottom: 10px;
 }
 
-.about-content h1 {
+.content-left h1 {
   font-size: 3rem;
   font-family: "optimus-princeps", "Aboreto", cursive, sans-serif;
 }
 
-.about-content hr {
+.content-left hr {
   width: 30%;
   margin-top: 10px;
 }
 
-.about-content p {
+.content-left p {
   max-width: 40rem;
   padding: 40px 0;
   line-height: 1.6;
 }
 
-.about-images {
+.content-left p,
+.content-left hr {
+  margin-inline: auto;
+}
+
+.content-right {
+  background-color: var(--clr-primary-95opacity);
+  margin: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.img-section-1,
-.img-section-2 {
-  height: 50%;
+.content-right h1 {
+  text-align: center;
+  max-width: 80%;
+  font-size: 4rem;
+  color: var(--clr-accent);
 }
 
-.img-section-1 img,
-.img-section-2 img {
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
+@media (max-width: 1045px) {
+  .about-page {
+    display: table-cell;
+  }
+
+  .content-right h1 {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .content-right h1 {
+    font-size: 2rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 350px) {
+  .content-right h1 {
+    font-size: 1.5rem;
+  }
+
+  .content-left h1 {
+    font-size: 2rem;
+  }
+
+  .content-left h3 {
+    font-size: 1rem;
+  }
+
+  .content-left p {
+    font-size: 12px;
+  }
 }
