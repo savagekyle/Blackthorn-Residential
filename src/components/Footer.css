@@ -15,10 +15,6 @@
   }
 }
 
-footer {
-  font-family: "Raleway", sans-serif;
-}
-
 @media (max-width: 500px) {
   footer {
     max-width: 300px;

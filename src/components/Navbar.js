@@ -11,6 +11,13 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(true);
 
+  const links = [
+    { to: "/", name: "Home" },
+    { to: "/gallery", name: "Gallery" },
+    { to: "/about", name: "About" },
+    { to: "/contact", name: "Contact" },
+  ];
+
   return (
     <>
       <nav className={click ? "navbar" : "hidden"}>
@@ -25,35 +32,30 @@ function Navbar() {
             icon={faBars}
           />
           <ul className={"list-items"}>
-            <Link to="/gallery" className="nav-links" aria-current="page">
-              <li>Gallery</li>
-            </Link>
-            <li className="nav-bars">|</li>
-            <Link to="/about" className="nav-links" aria-current="page">
-              <li>About</li>
-            </Link>
-            <li className="nav-bars">|</li>
-            <Link to="/contact" className="nav-links" aria-current="page">
-              <li>Contact</li>
-            </Link>
+            {links.map((link, index) => (
+              <React.Fragment key={index}>
+                <Link to={link.to} className="nav-links" aria-current="page">
+                  <li>{link.name}</li>
+                </Link>
+                {index !== links.length - 1 && <li className="nav-bars">|</li>}
+              </React.Fragment>
+            ))}
           </ul>
         </div>
       </nav>
 
       {/* Mobile Menu */}
       <ul className={click ? "hidden" : "mobile-menu"}>
-        <Link to="/" onClick={closeMobileMenu} className="mobile-items">
-          <li>Home</li>
-        </Link>
-        <Link to="/gallery" onClick={closeMobileMenu} className="mobile-items">
-          <li>Gallery</li>
-        </Link>
-        <Link to="/about" onClick={closeMobileMenu} className="mobile-items">
-          <li>About</li>
-        </Link>
-        <Link to="/contact" onClick={closeMobileMenu} className="mobile-items">
-          <li>Contact</li>
-        </Link>
+        {links.map((link, index) => (
+          <Link
+            key={index}
+            to={link.to}
+            onClick={closeMobileMenu}
+            className="mobile-items"
+          >
+            <li>{link.name}</li>
+          </Link>
+        ))}
         <FontAwesomeIcon
           className={"mobile-menu-icon"}
           onClick={handleClick}

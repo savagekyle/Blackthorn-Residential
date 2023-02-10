@@ -2,10 +2,49 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+}
+
+@font-face {
+  font-family: "optimus-princeps";
+  src: url("./fonts/OptimusPrinceps.ttf");
+}
+
 :root {
   --clr-primary: rgb(46, 48, 48);
   --clr-primary-95opacity: rgb(46, 48, 48, 0.95);
   --clr-white: #fff;
-  --clr-gray: rgb(182, 182, 182);
+  --clr-gray: rgb(202, 202, 202);
   --clr-accent: rgb(247, 239, 228);
+  --font-main: "Raleway", sans-serif;
+  --font-title: "optimus-princeps", "Aboreto", cursive, sans-serif;
+  --font-accent: "Aboreto", cursive, sans-serif;
+  --contact-img: url("./assets/rustic-interior.jpg");
+  --slide-left: 1s ease-out 0s 1 slideInLeft;
+  --fade-in: fadeIn 3s;
+  --fade-in-short: fadeIn 0.5s;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

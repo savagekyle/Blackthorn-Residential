@@ -23,7 +23,7 @@
 
 .content-left h1 {
   font-size: 3rem;
-  font-family: "optimus-princeps", "Aboreto", cursive, sans-serif;
+  font-family: var(--font-title);
 }
 
 .content-left hr {
@@ -35,10 +35,6 @@
   max-width: 40rem;
   padding: 40px 0;
   line-height: 1.6;
-}
-
-.content-left p,
-.content-left hr {
   margin-inline: auto;
 }
 

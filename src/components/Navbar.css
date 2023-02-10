@@ -26,18 +26,6 @@
   margin-top: 10px;
 }
 
-@media (max-width: 700px) {
-  .navbar-logo {
-    margin-left: 2rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .navbar-logo {
-    margin-left: 0;
-  }
-}
-
 .menu-icon {
   color: var(--clr-white);
   font-size: 1.5rem;
@@ -45,29 +33,11 @@
   margin-right: 4rem;
 }
 
-@media (max-width: 700px) {
-  .menu-icon {
-    margin-right: 2rem;
-  }
-}
-
-@media (min-width: 900px) {
-  .menu-icon {
-    display: none;
-  }
-}
-
 .list-items {
   display: flex;
   padding: 10px;
   margin-right: 8rem;
-  font-family: "Aboreto", cursive;
-}
-
-@media (max-width: 900px) {
-  .list-items {
-    display: none;
-  }
+  font-family: var(--font-title);
 }
 
 .hidden {
@@ -75,10 +45,8 @@
 }
 
 .nav-links {
-  list-style: none;
   margin-right: 20px;
   font-size: 1.2rem;
-  text-decoration: none;
   color: var(--clr-white);
 }
 
@@ -111,32 +79,19 @@
   justify-content: center;
   font-size: 3rem;
   opacity: 98%;
-  list-style: none;
-  z-index: 999;
-  animation: 1s ease-out 0s 1 slideInLeft;
-}
-
-@media (max-width: 600px) {
-  .mobile-menu {
-    font-size: 1.5rem;
-  }
+  z-index: 2000;
+  animation: var(--slide-left);
 }
 
 .mobile-menu-icon {
   color: var(--clr-white);
   font-size: large;
   cursor: pointer;
-  z-index: 20000;
+  z-index: 1;
   position: absolute;
   top: 5%;
   right: 5%;
   font-size: 2rem;
-}
-
-@media (max-width: 600px) {
-  .mobile-menu-icon {
-    font-size: 1.5rem;
-  }
 }
 
 .mobile-items {
@@ -153,7 +108,7 @@
 }
 
 .mobile-items li {
-  font-family: "Aboreto", cursive;
+  font-family: var(--font-accent);
 }
 
 .mobile-items:hover {
@@ -162,11 +117,44 @@
   transform: scale();
 }
 
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
+@media (max-width: 600px) {
+  .mobile-menu {
+    font-size: 1.5rem;
   }
-  100% {
-    transform: translateX(0);
+}
+
+@media (max-width: 600px) {
+  .mobile-menu-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .list-items {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu-icon {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-logo {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-logo {
+    margin-left: 0;
   }
 }
