@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: var(--clr-background);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +24,7 @@ html {
   --clr-primary: rgb(46, 48, 48);
   --clr-primary-95opacity: rgb(46, 48, 48, 0.95);
   --clr-white: #fff;
+  --clr-background: rgb(245, 242, 242);
   --clr-gray: rgb(202, 202, 202);
   --clr-accent: rgb(247, 239, 228);
   --font-main: "Raleway", sans-serif;
@@ -29,6 +34,22 @@ html {
   --slide-left: 1s ease-out 0s 1 slideInLeft;
   --fade-in: fadeIn 3s;
   --fade-in-short: fadeIn 0.5s;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clr-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-primary);
+}
+
+::-webkit-scrollbar-track:hover {
+  background: var(--clr-gray);
 }
 
 @keyframes slideInLeft {
