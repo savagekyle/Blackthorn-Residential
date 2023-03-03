@@ -27,7 +27,8 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--clr-primary) !important;
-  padding: 0 40px;
+  padding: 40px 40px;
+  border-radius: 50%;
 }
 
 @media (max-width: 800px) {
