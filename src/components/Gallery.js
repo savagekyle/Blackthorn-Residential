@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Gallery.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,16 +7,38 @@ import {
   faAngleLeft,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { storage, db } from "../firebase";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { doc, setDoc, collection, getDocs } from "firebase/firestore";
+
+import ImageUpload from "../ImageUpload";
 
 function Gallery() {
-  const images = [
-    "https://picsum.photos/2000/2000",
-    "https://picsum.photos/2000/2000",
-    "https://picsum.photos/2000/2000",
-    "https://picsum.photos/2000/2000",
-    "https://picsum.photos/2000/2000",
-    "https://picsum.photos/2000/2000",
-  ];
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    loadAllImages();
+  }, []);
+
+  const loadAllImages = async () => {
+    const exteriorSnapshot = await getDocs(collection(db, "exterior"));
+    const bathroomsSnapshot = await getDocs(collection(db, "bathrooms"));
+    const kitchensSnapshot = await getDocs(collection(db, "kitchens"));
+    let currImages = [];
+    exteriorSnapshot.forEach((doc) => {
+      console.log(doc.id, "=>", doc.data());
+      currImages = [...currImages, doc.data().imageUrl];
+    });
+    bathroomsSnapshot.forEach((doc) => {
+      console.log(doc.id, "=>", doc.data());
+      currImages = [...currImages, doc.data().imageUrl];
+    });
+    kitchensSnapshot.forEach((doc) => {
+      console.log(doc.id, "=>", doc.data());
+      currImages = [...currImages, doc.data().imageUrl];
+    });
+    setImages(currImages);
+  };
 
   const [data, setData] = useState({ img: "", i: 0 });
 
@@ -79,15 +101,16 @@ function Gallery() {
           columnsCountBreakPoints={{ 350: 1, 550: 2, 1175: 3 }}
         >
           <Masonry gutter="20px">
-            {images.map((image, i) => (
-              <img
-                className="images"
-                key={i}
-                src={image}
-                alt=""
-                onClick={() => viewImage(image, i)}
-              />
-            ))}
+            {images &&
+              images.map((imageUrl, i) => (
+                <img
+                  className="images"
+                  key={i}
+                  src={imageUrl}
+                  alt=""
+                  onClick={() => viewImage(imageUrl, i)}
+                />
+              ))}
           </Masonry>
         </ResponsiveMasonry>
       </div>

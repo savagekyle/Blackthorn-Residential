@@ -1,8 +1,10 @@
 .main-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/placeholder-background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../assets/background.HEIC");
   background-size: cover;
   background-position: center;
+  height: 110svh;
+  height: 110dvh;
   height: 110vh;
   position: relative;
   top: 0;
@@ -39,11 +41,24 @@
   .br {
     font-size: 4rem;
   }
+
+  .main-image {
+    height: 100svh;
+    height: 100dvh;
+    height: 100vh;
+  }
 }
 
 @media (max-width: 500px) {
   .br {
     font-size: 3rem;
+    height: 90vh;
+  }
+
+  .main-image {
+    height: 100svh;
+    height: 100dvh;
+    height: 100vh;
   }
 }
 
