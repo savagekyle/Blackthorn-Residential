@@ -1,0 +1,17 @@
+.gallery-home {
+  width: min(90%, 60rem);
+  height: 100vh;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media (max-width: 1300px) {
+  .gallery-home {
+    height: auto;
+    flex-direction: column;
+    margin: 160px auto 80px;
+  }
+}
