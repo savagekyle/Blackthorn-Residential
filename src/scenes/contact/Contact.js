@@ -22,7 +22,6 @@ function Contact() {
           </div>
           <div className="contact-form">
             <h1>GET IN CONTACT</h1>
-            <hr></hr>
             <form
               action="https://formsubmit.co/43bb4e4ef6ac96d45383ce660fad27aa"
               method="POST"

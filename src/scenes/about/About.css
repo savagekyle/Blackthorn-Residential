@@ -28,7 +28,7 @@
 
 .content-left hr {
   width: 30%;
-  margin-top: 10px;
+  margin: 10px auto 0;
 }
 
 .content-left p {

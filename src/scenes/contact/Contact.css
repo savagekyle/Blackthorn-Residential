@@ -39,6 +39,10 @@
   font-size: 1.5rem;
 }
 
+.info hr {
+  width: 30%;
+}
+
 .contact-form {
   flex: 1;
 }
