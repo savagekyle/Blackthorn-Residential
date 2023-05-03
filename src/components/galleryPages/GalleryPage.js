@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
+import Title from "../title/Title";
 
 // import ImageUpload from "../../ImageUpload";
 
@@ -87,6 +88,7 @@ function Gallery(props) {
         </div>
       )}
       <div className="gallery-container">
+        <Title name={props.name} />
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 350: 1, 550: 2, 1175: 3 }}
         >
