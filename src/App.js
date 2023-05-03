@@ -5,8 +5,11 @@ import Main from "./scenes/landing/Main";
 import Footer from "./scenes/global/footer/Footer";
 import Contact from "./scenes/contact/Contact";
 import About from "./scenes/about/About";
-import Gallery from "./scenes/gallery/Gallery";
+import Gallery from "./scenes/gallery/galleryHome/Gallery";
 import ThankYou from "./scenes/thankyou/ThankYou";
+import Exterior from "./scenes/gallery/exterior/Exterior";
+import Bathrooms from "./scenes/gallery/bathrooms/Bathrooms";
+import Kitchens from "./scenes/gallery/kitchens/Kitchens";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path="/contact/thank-you" element={<ThankYou />} />
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery/exterior" element={<Exterior />} />
+        <Route path="/gallery/bathrooms" element={<Bathrooms />} />
+        <Route path="/gallery/kitchens" element={<Kitchens />} />
       </Routes>
       <Footer />
     </>

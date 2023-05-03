@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Gallery.css";
+import "./GalleryPage.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,13 +7,12 @@ import {
   faAngleLeft,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { storage, db } from "../../firebase";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { doc, setDoc, collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
+import { collection, getDocs } from "firebase/firestore";
 
-import ImageUpload from "../../ImageUpload";
+// import ImageUpload from "../../ImageUpload";
 
-function Gallery() {
+function Gallery(props) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -21,19 +20,10 @@ function Gallery() {
   }, []);
 
   const loadAllImages = async () => {
-    const exteriorSnapshot = await getDocs(collection(db, "exterior"));
-    const bathroomsSnapshot = await getDocs(collection(db, "bathrooms"));
-    const kitchensSnapshot = await getDocs(collection(db, "kitchens"));
+    const snapshot = await getDocs(collection(db, props.name));
+
     let currImages = [];
-    exteriorSnapshot.forEach((doc) => {
-      console.log(doc.id, "=>", doc.data());
-      currImages = [...currImages, doc.data().imageUrl];
-    });
-    bathroomsSnapshot.forEach((doc) => {
-      console.log(doc.id, "=>", doc.data());
-      currImages = [...currImages, doc.data().imageUrl];
-    });
-    kitchensSnapshot.forEach((doc) => {
+    snapshot.forEach((doc) => {
       console.log(doc.id, "=>", doc.data());
       currImages = [...currImages, doc.data().imageUrl];
     });
