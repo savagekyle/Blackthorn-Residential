@@ -1,29 +1,19 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Main from "./components/Main";
-import BlackCard from "./components/BlackCard";
-import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
-import Contact from "./components/Contact";
-import About from "./components/About";
-import Gallery from "./components/Gallery";
-import GalleryCTA from "./components/GalleryCTA";
-import ThankYou from "./components/ThankYou";
+import Navbar from "./scenes/global/nav/Navbar";
+import Main from "./scenes/landing/Main";
+import Footer from "./scenes/global/footer/Footer";
+import Contact from "./scenes/contact/Contact";
+import About from "./scenes/about/About";
+import Gallery from "./scenes/gallery/Gallery";
+import ThankYou from "./scenes/thankyou/ThankYou";
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Main /> <BlackCard /> <GalleryCTA /> <Testimonials />
-            </>
-          }
-        />
+        <Route path="/" element=<Main /> />
         <Route path="/contact" element={<Contact />} />
         <Route path="/contact/thank-you" element={<ThankYou />} />
         <Route path="/about" element={<About />} />

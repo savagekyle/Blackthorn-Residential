@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import Logo from "../assets/b-logo-white.svg";
+import Logo from "../../../assets/b-logo-white.svg";
 
 function Navbar() {
   const [click, setClick] = useState(true);
@@ -12,10 +12,19 @@ function Navbar() {
   const closeMobileMenu = () => setClick(true);
 
   const links = [
-    { to: "/", name: "Home" },
-    { to: "/gallery", name: "Gallery" },
-    { to: "/about", name: "About" },
-    { to: "/contact", name: "Contact" },
+    {
+      hasDrop: true,
+      to: "/gallery",
+      name: "Gallery",
+      drop1: "/gallery/exterior",
+      drop1Name: "exterior",
+      drop2: "/gallery/kitchens",
+      drop2Name: "kitchens",
+      drop3: "/gallery/bathrooms",
+      drop3Name: "bathrooms",
+    },
+    { hasDrop: false, to: "/about", name: "About" },
+    { hasDrop: false, to: "/contact", name: "Contact" },
   ];
 
   return (
@@ -34,9 +43,22 @@ function Navbar() {
           <ul className={"list-items"}>
             {links.map((link, index) => (
               <React.Fragment key={index}>
-                <Link to={link.to} className="nav-links" aria-current="page">
-                  <li>{link.name}</li>
-                </Link>
+                {!link.hasDrop ? (
+                  <Link to={link.to} className="nav-links" aria-current="page">
+                    <li>{link.name}</li>
+                  </Link>
+                ) : (
+                  <Link to={link.to} className="nav-links" aria-current="page">
+                    <li className="dropdown">
+                      {link.name}
+                      <div className="dropdown-links">
+                        <Link to={link.drop1}>{link.drop1Name}</Link>
+                        <Link to={link.drop2}>{link.drop2Name}</Link>
+                        <Link to={link.drop3}>{link.drop3Name}</Link>
+                      </div>
+                    </li>
+                  </Link>
+                )}
                 {index !== links.length - 1 && <li className="nav-bars">|</li>}
               </React.Fragment>
             ))}

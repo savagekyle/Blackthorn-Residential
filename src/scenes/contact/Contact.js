@@ -1,7 +1,7 @@
 import React from "react";
 import "./Contact.css";
-import { Button } from "./Button";
-import Logo from "../assets/full-blackthorn-logo-white.svg";
+import { Button } from "../../components/button/Button";
+import Logo from "../../assets/full-blackthorn-logo-white.svg";
 
 function Contact() {
   return (

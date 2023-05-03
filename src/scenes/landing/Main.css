@@ -1,6 +1,6 @@
 .main-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../assets/background.HEIC");
+    url("../../assets/background.HEIC");
   background-size: cover;
   background-position: center;
   height: 110svh;

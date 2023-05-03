@@ -1,7 +1,7 @@
 import React from "react";
 import "./GalleryCTA.css";
-import Img from "../assets/rustic-interior.jpg";
-import { Button } from "./Button";
+import Img from "../../assets/rustic-interior.jpg";
+import { Button } from "../button/Button";
 import { Link } from "react-router-dom";
 
 function GalleryCTA() {

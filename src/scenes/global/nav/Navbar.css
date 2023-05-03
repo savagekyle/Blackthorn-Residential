@@ -36,7 +36,7 @@
 .list-items {
   display: flex;
   padding: 10px;
-  margin-right: 8rem;
+  margin-right: 4rem;
   font-family: var(--font-title);
 }
 
@@ -64,6 +64,40 @@
   margin-right: 20px;
   font-size: 1.2rem;
   list-style: none;
+}
+
+li.dropdown {
+  display: inline-block;
+  font-family: var(--font-accent);
+}
+
+.dropdown-links {
+  display: none;
+  position: absolute;
+  background-color: var(--clr-white);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px;
+}
+
+.dropdown-links a {
+  color: var(--clr-primary);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-family: var(--font-accent);
+  font-size: 1.1rem; /* add this line */
+}
+
+.dropdown-links a:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+.dropdown:hover .dropdown-links {
+  display: block;
 }
 
 .mobile-menu {

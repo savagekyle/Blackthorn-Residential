@@ -7,11 +7,11 @@ import {
   faAngleLeft,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { storage, db } from "../firebase";
+import { storage, db } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc, collection, getDocs } from "firebase/firestore";
 
-import ImageUpload from "../ImageUpload";
+import ImageUpload from "../../ImageUpload";
 
 function Gallery() {
   const [images, setImages] = useState([]);
