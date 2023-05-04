@@ -25,7 +25,6 @@ function Gallery(props) {
 
     let currImages = [];
     snapshot.forEach((doc) => {
-      console.log(doc.id, "=>", doc.data());
       currImages = [...currImages, doc.data().imageUrl];
     });
     setImages(currImages);
@@ -64,23 +63,40 @@ function Gallery(props) {
     }
   };
 
+  data.img &&
+    (document.onkeydown = function (event) {
+      switch (event.key) {
+        case "ArrowLeft":
+          imgAction("prev-img");
+          break;
+        case "ArrowRight":
+          imgAction("next-img");
+          break;
+        default:
+          break;
+      }
+    });
+
   return (
     <>
       <div className="spacer"></div>
       {data.img && (
         <div className="zoom-img-container">
-          <div className="zoom-img">
-            <div className="x" onClick={() => imgAction()}>
-              <FontAwesomeIcon className="close-icon" icon={faX} />
-            </div>
+          <div className="zoom-img" onClick={() => imgAction()}>
             <FontAwesomeIcon
-              onClick={() => imgAction("prev-img")}
+              onClick={(e) => {
+                e.stopPropagation();
+                imgAction("prev-img");
+              }}
               className="prev"
               icon={faAngleLeft}
             />
             <img className="big-img" src={data.img} alt="enlarged" />{" "}
             <FontAwesomeIcon
-              onClick={() => imgAction("next-img")}
+              onClick={(e) => {
+                e.stopPropagation();
+                imgAction("next-img");
+              }}
               className="next"
               icon={faAngleRight}
             />

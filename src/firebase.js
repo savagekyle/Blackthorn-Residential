@@ -9,13 +9,13 @@ import { getFirestore } from "firebase/firestore";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD9wS9hXYKgb96peSuVduYRIXpydVvW4C4",
-  authDomain: "blackthorn-residential-images.firebaseapp.com",
+  apiKey: process.env.REACT_APP_FIREBASE_API,
+  authDomain: process.env.REACT_APP_AUTH,
   projectId: "blackthorn-residential-images",
-  storageBucket: "blackthorn-residential-images.appspot.com",
-  messagingSenderId: "667067177925",
-  appId: "1:667067177925:web:98ca2f5630bbc5637589ac",
-  measurementId: "G-NCV870YMBC",
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_SENDERID,
+  appId: process.env.REACT_APP_APPID,
+  measurementId: process.env.REACT_APP_MEASUREMENTID,
 };
 
 // Initialize Firebase
