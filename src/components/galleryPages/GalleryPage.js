@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./GalleryPage.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faX,
-  faAngleLeft,
-  faAngleRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Title from "../title/Title";
@@ -18,7 +14,7 @@ function Gallery(props) {
 
   useEffect(() => {
     loadAllImages();
-  }, []);
+  });
 
   const loadAllImages = async () => {
     const snapshot = await getDocs(collection(db, props.name));

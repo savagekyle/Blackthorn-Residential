@@ -1,0 +1,47 @@
+.login-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../../assets/background.HEIC");
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
+  height: 100dvh;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.login-box {
+  background-color: var(--clr-primary);
+  height: 30rem;
+  width: min(90%, 30rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 100;
+}
+
+.input-fields input {
+  height: 50px;
+  min-height: 40px;
+  padding-left: 10px;
+}
+
+.input-fields img {
+  height: 80px;
+}
+
+.input-fields h1 {
+  color: var(--clr-white);
+  text-align: center;
+  margin-bottom: 30px;
+}

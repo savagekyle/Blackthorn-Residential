@@ -1,12 +1,10 @@
 import { Outlet, Navigate } from "react-router-dom";
-import { useState } from "react";
 
 const PrivateRoute = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    !!localStorage.getItem("token")
-  );
-
-  return isAuthenticated ? <Outlet /> : <Navigate to="/admin" />;
+  const isAuthenticated = localStorage.getItem("key");
+  const checkAuthentication =
+    isAuthenticated === process.env.REACT_APP_USER_KEY;
+  return checkAuthentication ? <Outlet /> : <Navigate to="/admin" />;
 };
 
 export default PrivateRoute;
