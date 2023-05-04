@@ -67,6 +67,7 @@ function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
+
       <ul className={click ? "hidden" : "mobile-menu"}>
         {links.map((link, index) => (
           <Link
