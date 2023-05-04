@@ -5,11 +5,14 @@ import Main from "./scenes/landing/Main";
 import Footer from "./scenes/global/footer/Footer";
 import Contact from "./scenes/contact/Contact";
 import About from "./scenes/about/About";
+import AdminLogin from "./scenes/admin/login/Login";
+import AdminDashboard from "./scenes/admin/dashboard/Dashboard";
 import Gallery from "./scenes/gallery/galleryHome/Gallery";
 import ThankYou from "./scenes/thankyou/ThankYou";
 import Exterior from "./scenes/gallery/exterior/Exterior";
 import Bathrooms from "./scenes/gallery/bathrooms/Bathrooms";
 import Kitchens from "./scenes/gallery/kitchens/Kitchens";
+import PrivateRoutes from "./utils/PrivateRoutes";
 
 function App() {
   return (
@@ -24,6 +27,10 @@ function App() {
         <Route path="/gallery/exterior" element={<Exterior />} />
         <Route path="/gallery/bathrooms" element={<Bathrooms />} />
         <Route path="/gallery/kitchens" element={<Kitchens />} />
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route element={<PrivateRoutes />}>
+          <Route path="/admin/dashboard" element={<AdminDashboard />} exact />
+        </Route>
       </Routes>
       <Footer />
     </>
