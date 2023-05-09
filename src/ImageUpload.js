@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { storage, db } from "./firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
+import { Button } from "./components/button/Button";
 
-const ImageUpload = () => {
+const ImageUpload = (props) => {
   const [files, setFiles] = useState([]);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [uploaded, setUploaded] = useState(false);
@@ -44,7 +45,7 @@ const ImageUpload = () => {
           () => {
             getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
               console.log("download url: ", downloadUrl);
-              const imageStoreRef = doc(db, "kitchens", file.name);
+              const imageStoreRef = doc(db, props.collection, file.name);
               setDoc(imageStoreRef, {
                 imageUrl: downloadUrl,
               }).then(() => {
@@ -67,14 +68,14 @@ const ImageUpload = () => {
   };
 
   return (
-    <div>
+    <div style={{ color: "var(--clr-white)" }}>
       <input
         type="file"
-        accept="/image/*"
+        accept="image/*,video/*,.heic,.heif,.hevc,.mov"
         multiple
         onChange={handleChange}
       ></input>
-      <button onClick={handleUpload}>Upload images to firebase</button>
+      <Button onClick={handleUpload}>Upload</Button>
     </div>
   );
 };

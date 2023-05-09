@@ -7,8 +7,6 @@ import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Title from "../title/Title";
 
-// import ImageUpload from "../../ImageUpload";
-
 function Gallery(props) {
   const [images, setImages] = useState([]);
 
