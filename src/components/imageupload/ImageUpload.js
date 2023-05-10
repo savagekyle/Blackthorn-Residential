@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { storage, db } from "./firebase";
+import { storage, db } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
-import { Button } from "./components/button/Button";
+import { Button } from "../button/Button";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./ImageUpload.css";
 
-const ImageUpload = (props) => {
+const ImageUpload = () => {
   const [files, setFiles] = useState([]);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [uploaded, setUploaded] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleSelect = (e) => {
+    setSelectedOption(e.target.value);
+  };
 
   useEffect(() => {
     if (!open) {
@@ -39,13 +48,12 @@ const ImageUpload = (props) => {
             setUploadProgress(progress);
           },
           (error) => {
-            console.log(error);
+            toast.error(error, { position: "bottom-right", autoClose: 5000 });
             reject(error);
           },
           () => {
             getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
-              console.log("download url: ", downloadUrl);
-              const imageStoreRef = doc(db, props.collection, file.name);
+              const imageStoreRef = doc(db, selectedOption, file.name);
               setDoc(imageStoreRef, {
                 imageUrl: downloadUrl,
               }).then(() => {
@@ -61,6 +69,10 @@ const ImageUpload = (props) => {
       .then(() => {
         setUploaded(true);
         setFiles([]);
+        toast.success("Images uploaded!", {
+          position: "bottom-right",
+          autoClose: 5000,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -68,14 +80,20 @@ const ImageUpload = (props) => {
   };
 
   return (
-    <div style={{ color: "var(--clr-white)" }}>
+    <div className="upload">
+      <select onChange={handleSelect}>
+        <option value="">Section</option>
+        <option value="kitchens">Kitchens</option>
+        <option value="bathrooms">Bathrooms</option>
+        <option value="exterior">Exterior</option>
+      </select>
       <input
         type="file"
         accept="image/*,video/*,.heic,.heif,.hevc,.mov"
         multiple
         onChange={handleChange}
       ></input>
-      <Button onClick={handleUpload}>Upload</Button>
+      <Button onClick={handleUpload}>Upload Images</Button>
     </div>
   );
 };

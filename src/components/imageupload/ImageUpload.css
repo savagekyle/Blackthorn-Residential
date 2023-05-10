@@ -1,0 +1,17 @@
+.upload {
+  color: var(--clr-white);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.upload select {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.upload select option {
+  font-size: 1rem;
+}
