@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "../../../components/button/Button";
+import { ToastContainer, toast } from "react-toastify";
 import Logo from "../../../assets/b-logo-white.svg";
 import "./Login.css";
 
@@ -16,6 +17,26 @@ const Login = () => {
     if (usernameValidation && passwordValidation) {
       localStorage.setItem("key", process.env.REACT_APP_USER_KEY);
       window.location.href = "/admin/dashboard";
+    } else if (!usernameValidation && !passwordValidation) {
+      toast.error("Incorrect username and password", {
+        position: "bottom-right",
+        autoClose: 5000,
+      });
+      setUsername("");
+      setPassword("");
+    } else if (!usernameValidation) {
+      toast.error("Incorrect username", {
+        position: "bottom-right",
+        autoClose: 5000,
+      });
+      setUsername("");
+      setPassword("");
+    } else if (!passwordValidation) {
+      toast.error("Incorrect password", {
+        position: "bottom-right",
+        autoClose: 5000,
+      });
+      setPassword("");
     }
   };
 
@@ -44,6 +65,7 @@ const Login = () => {
           </Button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

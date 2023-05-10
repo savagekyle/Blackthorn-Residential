@@ -3,7 +3,7 @@ import { storage, db } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { Button } from "../button/Button";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./ImageUpload.css";
 
@@ -69,32 +69,37 @@ const ImageUpload = () => {
       .then(() => {
         setUploaded(true);
         setFiles([]);
+        setSelectedOption("");
+        document.getElementById("file-input").value = null;
         toast.success("Images uploaded!", {
           position: "bottom-right",
           autoClose: 5000,
         });
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error, { position: "bottom-right", autoClose: 5000 });
       });
   };
 
   return (
-    <div className="upload">
-      <select onChange={handleSelect}>
-        <option value="">Section</option>
-        <option value="kitchens">Kitchens</option>
-        <option value="bathrooms">Bathrooms</option>
-        <option value="exterior">Exterior</option>
-      </select>
-      <input
-        type="file"
-        accept="image/*,video/*,.heic,.heif,.hevc,.mov"
-        multiple
-        onChange={handleChange}
-      ></input>
-      <Button onClick={handleUpload}>Upload Images</Button>
-    </div>
+    <>
+      <div className="upload">
+        <select onChange={handleSelect} value={selectedOption}>
+          <option value="">Section</option>
+          <option value="kitchens">Kitchens</option>
+          <option value="bathrooms">Bathrooms</option>
+          <option value="exterior">Exterior</option>
+        </select>
+        <input
+          type="file"
+          accept="image/*,video/*,.heic,.heif,.hevc,.mov"
+          multiple
+          onChange={handleChange}
+          id="file-input"
+        ></input>
+        <Button onClick={handleUpload}>Upload Images</Button>
+      </div>
+    </>
   );
 };
 
