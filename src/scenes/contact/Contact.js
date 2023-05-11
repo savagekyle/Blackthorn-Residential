@@ -15,7 +15,6 @@ function Contact() {
               <p>Rob Savage</p>
               <p>President</p>
               <p>rob@blackthornresidential.com</p>
-              <p>(865) 388-7284</p>
             </div>
 
             <img src={Logo} alt="br logo" className="full-logo" />

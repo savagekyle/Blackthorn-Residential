@@ -29,7 +29,7 @@ body {
   --font-main: "Raleway", sans-serif;
   --font-title: "optimus-princeps", "Aboreto", cursive, sans-serif;
   --font-accent: "Aboreto", cursive, sans-serif;
-  --contact-img: url("./assets/rustic-interior.jpg");
+  --contact-img: url("./assets/background2.HEIC");
   --slide-left: 1s ease-out 0s 1 slideInLeft;
   --fade-in: fadeIn 3s;
   --fade-in-short: fadeIn 0.5s;
