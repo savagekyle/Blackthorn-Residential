@@ -1,6 +1,6 @@
 import React from "react";
 import "./GalleryCTA.css";
-import Img from "../../assets/rustic-interior.jpg";
+import Img from "../../assets/background2.HEIC";
 import { Button } from "../button/Button";
 import { Link } from "react-router-dom";
 
