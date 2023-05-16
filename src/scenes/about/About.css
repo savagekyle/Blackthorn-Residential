@@ -1,89 +1,67 @@
 .about-page {
+  margin: 120px 0 80px;
+}
+
+.about {
   display: flex;
-  height: 100vh;
-  padding-top: 80px;
-}
-
-.about-page > * {
-  flex-basis: 100%;
-}
-
-.content-left {
-  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 2;
+  width: min(90%, 60rem);
   margin-inline: auto;
-  align-items: center;
-  margin-top: 80px;
-  padding: 0 20px;
 }
 
-.content-left h3 {
-  font-size: 1.5rem;
-  padding-bottom: 10px;
-}
-
-.content-left h1 {
-  font-size: 3rem;
+.about-br {
   font-family: var(--font-title);
 }
 
-.content-left hr {
+.about hr {
   width: 30%;
-  margin: 10px auto 0;
 }
 
-.content-left p {
-  max-width: 40rem;
-  padding: 40px 0;
-  line-height: 1.6;
-  margin-inline: auto;
+.about h1 {
+  font-size: 2.5rem;
 }
 
-.content-right {
-  background-color: var(--clr-primary-95opacity);
-  margin: 20px;
+.about p {
+  font-size: 1.3rem;
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  content: "";
+  background-image: linear-gradient(
+    45deg,
+    var(--clr-primary),
+    var(--clr-primary),
+    var(--clr-primary)
+  );
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(-4deg);
+}
+
+.diag-wrapper {
+  width: min(90%, 60rem);
+  margin: 80px auto;
+  padding-block: 100px;
+  color: var(--clr-white);
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content-right h1 {
+  flex-direction: column;
+  gap: 30px;
   text-align: center;
-  max-width: 80%;
-  font-size: 4rem;
-  color: var(--clr-accent);
 }
 
-@media (max-width: 1045px) {
-  .about-page {
-    display: table-cell;
-  }
-
-  .content-right h1 {
-    padding: 40px;
-  }
+.testimonial {
+  font-size: 1.4rem;
+  line-height: 2;
 }
 
-@media (max-width: 500px) {
-  .content-right h1 {
-    font-size: 2rem;
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 350px) {
-  .content-right h1 {
-    font-size: 1.5rem;
-  }
-
-  .content-left h1 {
-    font-size: 2rem;
-  }
-
-  .content-left h3 {
-    font-size: 1rem;
-  }
-
-  .content-left p {
-    font-size: 12px;
-  }
+.author {
+  text-align: center;
 }
