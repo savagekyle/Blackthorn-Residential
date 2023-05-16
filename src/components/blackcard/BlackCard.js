@@ -8,8 +8,9 @@ function BlackCard() {
     <div className="background">
       <div className="card-container">
         <p className="card-text">
-          "Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry."
+          "each project is thoroughly analyzed for potential pitfalls and
+          creative solutions to give each client a specialized approach to their
+          construction projects."
         </p>
         <Link to="/about">
           <Button buttonSize="btn--large" buttonStyle="btn--outline">
