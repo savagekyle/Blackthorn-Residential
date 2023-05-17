@@ -13,7 +13,7 @@ function Contact() {
               <h1>GENERAL INFO</h1>
               <hr></hr>
               <p>Rob Savage</p>
-              <p>President</p>
+              <p>Owner</p>
               <p>rob@blackthornresidential.com</p>
             </div>
 

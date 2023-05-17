@@ -21,6 +21,7 @@
 
 .about h1 {
   font-size: 2.5rem;
+  font-weight: 100;
 }
 
 .about p {
@@ -64,4 +65,12 @@
 
 .author {
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .about hr,
+  .about h1 {
+    margin-inline: auto;
+    text-align: center;
+  }
 }

@@ -34,10 +34,10 @@ function About() {
         <div className="diagonal">
           <div className="diag-wrapper">
             <p className="testimonial">
-              " In the situation we find ourselves today, it is often difficult
+              "In the situation we find ourselves today, it is often difficult
               to find someone who fulfills promises to your expectations. We
               found that someone in Rob Savage. He had provided a rendering of
-              the finished product, and the final results are spectacular. "
+              the finished product, and the final results are spectacular."
             </p>
             <p className="author">- Gary Baskette</p>
           </div>

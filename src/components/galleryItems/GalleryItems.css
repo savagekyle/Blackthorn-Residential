@@ -14,7 +14,6 @@
 
 .gallery-item:hover .gallery-thumbnail,
 .gallery-item h1 {
-  transform: scale(1.1);
   filter: brightness(100%);
   color: var(--clr-primary);
 }
@@ -32,6 +31,12 @@
 @media (max-width: 1400px) {
   .gallery-thumbnail {
     width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .gallery-item:hover .gallery-thumbnail {
+    transform: scale(1.1);
   }
 }
 

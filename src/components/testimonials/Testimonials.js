@@ -23,12 +23,9 @@ function Testimonials() {
     >
       <SwiperSlide>
         <div className="slide-container">
-          <h1>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </h1>
+          <h1>The final results are spectacular.</h1>
           <FontAwesomeIcon className="quote-icon" icon={faQuoteLeft} />
-          <p>Kyle Savage</p>
+          <p>Gary Baskette</p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
