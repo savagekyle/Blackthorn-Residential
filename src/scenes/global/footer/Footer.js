@@ -8,7 +8,8 @@ function Footer() {
   return (
     <div className="footer-container">
       <footer>
-        Copyright &copy; {year} Blackthorn Residential. All Rights Reserved.
+        Copyright &copy; {year} Blackthorn Residential, LLC. All Rights
+        Reserved.
       </footer>
     </div>
   );
