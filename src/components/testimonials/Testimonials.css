@@ -64,7 +64,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .swiper-slide h1 {
     font-size: 2rem;
     max-width: 400px;
