@@ -188,6 +188,6 @@ li.dropdown {
 
 @media (max-width: 500px) {
   .navbar-logo {
-    margin-left: 0;
+    margin-left: 1rem;
   }
 }
