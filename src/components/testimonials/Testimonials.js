@@ -23,7 +23,10 @@ function Testimonials() {
     >
       <SwiperSlide>
         <div className="slide-container">
-          <h1>The final results are spectacular.</h1>
+          <h1>
+            He provided a rendering of the finished product, and the final
+            results are spectacular.
+          </h1>
           <FontAwesomeIcon className="quote-icon" icon={faQuoteLeft} />
           <p>Gary Baskette</p>
         </div>
@@ -31,20 +34,32 @@ function Testimonials() {
       <SwiperSlide>
         <div className="slide-container">
           <h1>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            We have used Rob and his crews for countless projects over 20 years.
+            We continue to call on his services. Highly recommend Blackthorn for
+            any project.
           </h1>
           <FontAwesomeIcon className="quote-icon" icon={faQuoteLeft} />
-          <p>Rob Savage</p>
+          <p>Mike and Linda Pitts</p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="slide-container">
           <h1>
-            My dad is simply the best builder in all of Knoxville. Easily.
+            Rob is always a phone call away for any project we have. Couldn't be
+            happier with the results.
           </h1>
           <FontAwesomeIcon className="quote-icon" icon={faQuoteLeft} />
-          <p>Olivia Savage</p>
+          <p>Dr. Dale Wortham</p>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="slide-container">
+          <h1>
+            I have recommended Rob Savage to many of my partners. His designs
+            and finished product are outstanding.
+          </h1>
+          <FontAwesomeIcon className="quote-icon" icon={faQuoteLeft} />
+          <p>Dr. Johnny Altawil</p>
         </div>
       </SwiperSlide>
     </Swiper>
