@@ -72,7 +72,7 @@ function About() {
           <p>
             Today, Blackthorn Residential and Rob Savage have put their
             attention to detail and focus on quality construction to work
-            creating amazing additions and customer renovations for many in the
+            creating amazing additions and custom renovations for many in the
             Knoxville Market.
           </p>
           <hr />
